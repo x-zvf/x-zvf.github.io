@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Hack", monospace;
+  line-height: 1.4;
+  background: #5e81ac;
+  height: 100vh;
+  width: 100vw; }
+
+.menu-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%; }
+
+.nav-link {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #eceff4;
+  text-decoration: none; }
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.4rem;
+  background: #5e81ac;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly; }
+
+.ham-line,
+.ham-line::before,
+.ham-line::after {
+  width: 100%;
+  height: 0.5rem;
+  background: #eceff4;
+  border-radius: 0.25rem; }
+
+.ham-line {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s ease; }
+
+.ham-line::before,
+.ham-line::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -0.85rem; }
+
+.ham-line::after {
+  top: 0.85rem; }
+
+.hamburger-toggler:checked ~ .hamburger > .ham-line {
+  transform: rotate(225deg); }
+
+.hamburger-toggler:checked ~ .hamburger > .ham-line::after,
+.hamburger-toggler:checked ~ .hamburger > .ham-line::before {
+  top: 0;
+  transform: rotate(-90deg); }
+
+.hamburger-toggler {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0; }
