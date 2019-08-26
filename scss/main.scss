@@ -51,6 +51,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
+
+  visibility: hidden;
 }
 
 .ham-line,
@@ -79,6 +81,13 @@ body {
   top: -$ham-line-spacing;
 }
 
+@media screen and (max-width: 50rem){
+  .hamburger,
+  .hamburger-toggler{
+    visibility: visible;
+  }
+}
+
 .ham-line::after {
   top: $ham-line-spacing;
 }
@@ -100,4 +109,6 @@ body {
   width: $hamburger-size;
   height: $hamburger-size;
   opacity: 0;
+
+  visibility: hidden;
 }
