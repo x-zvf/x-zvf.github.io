@@ -20,14 +20,6 @@ $nord15: #b48ead;
 $bg-colour: $nord0;
 $primary-colour: $nord4;
 
-$hamburger-size: 4rem;
-$margin-menu: 1rem;
-$hamburger-padding: 0.4rem;
-$ham-line-height: 0.5rem;
-$ham-line-spacing: (
-    $hamburger-size - ($hamburger-padding * 2) - (3 * $ham-line-height)
-  ) / 2;
-
 * {
   margin: 0;
   padding: 0;
@@ -43,96 +35,6 @@ body {
   color: $primary-colour;
 }
 
-.menu-cont {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-}
-
-.nav-link {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 2rem;
-  color: $primary-colour;
-  text-decoration: none;
-}
-
-.hamburger {
-  position: fixed;
-  top: $margin-menu;
-  left: $margin-menu;
-  z-index: 1;
-  width: $hamburger-size;
-  height: $hamburger-size;
-  padding: $hamburger-padding;
-  background: $bg-colour;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-
-  visibility: hidden;
-}
-
-.hamburger-toggler {
-  position: fixed;
-  top: $margin-menu;
-  left: $margin-menu;
-  z-index: 2;
-  cursor: pointer;
-  width: $hamburger-size;
-  height: $hamburger-size;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.ham-line,
-.ham-line::before,
-.ham-line::after {
-  width: 100%;
-  height: $ham-line-height;
-  background: $primary-colour;
-  border-radius: $ham-line-height/2;
-}
-
-.ham-line {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.4s ease;
-}
-
-.ham-line::before,
-.ham-line::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: -$ham-line-spacing;
-}
-
-@media screen and (max-width: 50rem) {
-  .hamburger,
-  .hamburger-toggler {
-    visibility: visible;
-  }
-}
-
-.ham-line::after {
-  top: $ham-line-spacing;
-}
-
-.hamburger-toggler:checked ~ .hamburger > .ham-line {
-  transform: rotate(225deg);
-}
-.hamburger-toggler:checked ~ .hamburger > .ham-line::after,
-.hamburger-toggler:checked ~ .hamburger > .ham-line::before {
-  top: 0;
-  transform: rotate(-90deg);
-}
 
 
 /* Content styling */
@@ -150,8 +52,9 @@ h2 {
 }
 
 main {
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
+  height:100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -161,14 +64,28 @@ main {
   }
 }
 
+.card {
+  background: $nord1;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
 .shell {
   background: $bg-colour;
   width: 100%;
+  min-width: 25rem;
   border-radius: 0.2rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  .shell-line {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
+  }
 
   .shell-char {
     margin:0;
@@ -182,5 +99,17 @@ main {
   }
   .shell-hostname {
     color: $nord14;
+  }
+  .shell-directory {
+    color: $nord10;
+  }
+  .shell-final {
+    color: $nord11;
+  }
+  .shell-command {
+    color: $nord14;
+  }
+  .shell-pipe {
+    color: $nord12;
   }
 }
