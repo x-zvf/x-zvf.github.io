@@ -41,7 +41,8 @@ main {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%; }
   .card-footer a {
     color: #d8dee9;
     text-decoration: none;
@@ -73,11 +74,13 @@ main {
     color: #ebcb8b; }
   .shell .shell-hostname {
     color: #a3be8c; }
-  .shell .shell-directory {
+  .shell .shell-path {
     color: #5e81ac; }
   .shell .shell-final {
     color: #bf616a; }
   .shell .shell-command {
     color: #a3be8c; }
+  .shell .shell-param {
+    color: #ebcb8b; }
   .shell .shell-pipe {
     color: #d08770; }
