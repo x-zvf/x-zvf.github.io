@@ -36,6 +36,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 20rem;
   max-width: 100vw; }
 
 .card-footer {
@@ -52,23 +53,30 @@ main {
     cursor: pointer;
     text-align: right; }
 
+@keyframes typing {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+
 .shell {
   background: #2e3440;
   width: 100%;
-  min-width: 18rem;
   border-radius: 0.2rem;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   padding: 1rem;
   flex-direction: column; }
   .shell .shell-line {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    z-index: 1;
+    position: relative; }
   .shell .shell-char {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    display: inline-block; }
   .shell .shell-user {
     color: #bf616a; }
   .shell .shell-at {
