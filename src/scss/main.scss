@@ -84,11 +84,9 @@ main {
 }
 
 @keyframes typing {
-  from {
-    color: $nord0;
-  }
+  from { width: 100%; }
+  to { width: 0; }
 }
-
 .shell {
   background: $bg-colour;
   width: 100%;
@@ -100,25 +98,29 @@ main {
   padding: 1rem;
   flex-direction: column;
 
-  .shell-line {
+  .shell-line-inner {
+
     display: flex;
     flex-wrap: wrap;
     z-index: 1;
     position: relative;
   }
 
-  /*
-  .shell-char::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    z-index: 2;
-    background: $nord0;
-    //animation: typing 0.1s steps(2) forwards;
-  }*/
+  .shell-line {
+
+    .shell-typer {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      z-index: 2;
+      background: $nord0;
+
+      animation: typing 0.2s steps(28) forwards;
+    }
+  }
+
   .shell-char {
     margin: 0;
     padding: 0;
@@ -147,14 +149,5 @@ main {
   }
   .shell-pipe {
     color: $nord12;
-  }
-}
-
-@for $e from 1 through 20 {
-  @for $i from 1 through 40 {
-    .shell:nth-child(#{$e}) span:nth-of-type(#{$i}) {
-      animation: typing 0.1s steps(1) both;
-      animation-delay: ($e * 20 + $i) * 0.05s;
-    }
   }
 }

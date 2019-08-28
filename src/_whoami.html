@@ -1,20 +1,9 @@
 <div class="shell-line">
-  ${require('./_hostname.html')}
-  <span class="shell-char shell-command">w</span>
-  <span class="shell-char shell-command">h</span>
-  <span class="shell-char shell-command">o</span>
-  <span class="shell-char shell-command">a</span>
-  <span class="shell-char shell-command">m</span>
-  <span class="shell-char shell-command">i</span>
-  <span class="shell-char">&nbsp;</span>
-  <span class="shell-char shell-pipe">|</span>
-  <span class="shell-char">&nbsp;</span>
-  <span class="shell-char shell-command">f</span>
-  <span class="shell-char shell-command">i</span>
-  <span class="shell-char shell-command">g</span>
-  <span class="shell-char shell-command">l</span>
-  <span class="shell-char shell-command">e</span>
-  <span class="shell-char shell-command">t</span>
+  <div class="shell-typer"></div>
+  ${require('./_hostname.html') user="xzvf" sign="$"}
+  <span class="shell-char shell-command">whoami&nbsp;</span>
+  <span class="shell-char shell-pipe">|&nbsp;</span>
+  <span class="shell-char shell-command">figlet</span>
 </div>
 <div class="shell-line">
   <pre>
