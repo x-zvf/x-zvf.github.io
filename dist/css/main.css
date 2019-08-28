@@ -17,12 +17,6 @@ h1,
 h2 {
   margin: 0;
   font-weight: 400; }
-  h1.heading-lg,
-  h2.heading-lg {
-    font-size: 6rem; }
-  h1.heading-sm,
-  h2.heading-sm {
-    font-size: 3rem; }
 
 main {
   padding: 2rem;
@@ -36,23 +30,40 @@ main {
 
 .card {
   background: #3b4252;
-  padding: 2rem;
-  border-radius: 0.5rem; }
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .card-footer a {
+    color: #d8dee9;
+    text-decoration: none;
+    max-width: 60%; }
+  .card-footer .info {
+    cursor: pointer;
+    text-align: right; }
 
 .shell {
   background: #2e3440;
   width: 100%;
-  min-width: 25rem;
+  min-width: 18rem;
   border-radius: 0.2rem;
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
-  flex-wrap: nowrap; }
+  padding: 1rem;
+  flex-direction: column; }
   .shell .shell-line {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    flex-wrap: nowrap; }
+    flex-wrap: wrap; }
   .shell .shell-char {
     margin: 0;
     padding: 0; }
