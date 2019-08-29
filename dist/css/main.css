@@ -16,7 +16,8 @@ body {
 .shell {
   margin: 0;
   font-weight: 400;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  overflow: hidden; }
 
 main {
   display: flex;
@@ -78,8 +79,9 @@ main {
     .shell .shell-line .shell-thefuck {
       white-space: pre; }
   .shell .shell-link {
-    color: #d8dee9;
-    text-decoration: underline; }
+    color: #8fbcbb;
+    text-decoration: underline;
+    font-weight: 500; }
   .shell .shell-char {
     margin: 0;
     padding: 0; }
