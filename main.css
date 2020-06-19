@@ -4,6 +4,7 @@ body {
     font-family: Hack, monospace;
     color: #eeeeee;
     height: 100%;
+    overflow: hidden;
 }
 a {
     color: #eeeeee;
@@ -45,6 +46,7 @@ footer {
 .terminal{
     background-color: black;
     padding: 1rem;
+    padding-bottom: 2rem;
     margin: 0;
     border-radius: 0.5rem;
     position: relative;
@@ -70,8 +72,10 @@ footer {
     white-space: pre-wrap;
     width: 100%;
     position: relative;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: -1rem;
     z-index: 1;
     height: 100%;
     overflow: hidden;
+    word-wrap: break-word;
 }
