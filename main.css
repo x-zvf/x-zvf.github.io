@@ -44,6 +44,28 @@ footer div {
     padding: 1rem;
 }
 
+
+.logo-user {
+    color: var(--cyan);
+}
+
+.logo-sep {
+    color: var(--blue);
+}
+
+.logo-hostname {
+    color: var(--cyan);
+}
+
+.logo-dir {
+    color: var(--base1);
+}
+
+.logo-lc {
+    color: var(--orange);
+}
+
+
 .logo-container {
   display: flex;
   justify-content: center;
@@ -51,7 +73,7 @@ footer div {
   height: 100%;
   font-size: calc(90vw / 12);
   animation: 
-    logo-scaling .5s ease-in-out forwards 2s;
+    logo-scaling 1.5s ease-in-out forwards 2s;
 }
 
 .typewriter h1 {
@@ -65,10 +87,35 @@ footer div {
     blink-caret .5s step-end infinite;
 }
 
+.typewriter h2 {
+    font: inherit;
+}
+
 @keyframes logo-scaling {
     from {
         height: 100%;
         font-size: calc(90vw / 12);
+    }
+    10% {
+        font-size: calc(125vw / 12);
+        height: 100%;
+    }
+    15% {
+        font-size: calc(115vw / 12);
+        height: 100%;
+    }
+    20% {
+        font-size: calc(120vw / 12);
+    }
+    50% {
+        font-size: calc(120vw / 12);
+        height: 2em;
+    }
+    90% {
+        font-size: calc(45vw / 12);
+    }
+    95% {
+        font-size: calc(52vw / 12);
     }
     to {
         font-size: calc(50vw / 12);
@@ -90,4 +137,8 @@ footer div {
 
 .noscript-content > div {
   padding-bottom: 1rem;
+}
+
+main {
+    display: grid;
 }
