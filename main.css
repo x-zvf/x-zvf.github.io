@@ -1,81 +1,93 @@
+:root {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0: #839496;
+  --base1: #93a1a1;
+  --base2: #eee8d5;
+  --base3: #fdf6e3;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red: #dc322f;
+  --magenta: #d33682;
+  --violet: #6c71c4;
+  --blue: #268bd2;
+  --cyan: #2aa198;
+  --green: #859900;
+}
+
 html,
 body {
-    background: #353535;
-    font-family: Hack, monospace;
-    color: #eeeeee;
-    height: 100%;
-    overflow: hidden;
+  background: var(--base03);
+  font-family: 'Hack', monospace;
+  color: var(--base2);
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 a {
-    color: #eeeeee;
+  color: #eeeeee;
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.noscript-content {
-    background: #333333;
-    border-radius: 0.5rem;
-    padding: 2rem;
-    width: fit-content;
-    height: fit-content;
-	position: absolute;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	
-    margin: auto;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    
-}
-.noscript-content > div {
-    padding-bottom: 1rem;
-}
-
-.terminal{
-    background-color: black;
+footer div {
     padding: 1rem;
-    padding-bottom: 2rem;
-    margin: 0;
-    border-radius: 0.5rem;
-    position: relative;
-    height: 90%;
-}
-.terminal-controls {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    margin-bottom: -1rem;
-}
-.terminal-title-container {
-    text-align: center;
-    position: absolute;
-    margin: 0;
-    width: 100%;
 }
 
-.terminal-content {
-    background-color: black;
-    font-family: Hack, monospace;
-    font-size: 14;
-    white-space: pre-wrap;
-    width: 100%;
-    position: relative;
-    margin-top: 1.5rem;
-    margin-bottom: -1rem;
-    z-index: 1;
-    height: 100%;
-    overflow: hidden;
-    word-wrap: break-word;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: calc(90vw / 12);
+  animation: 
+    logo-scaling .5s ease-in-out forwards 2s;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 1ch solid var(--cyan); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0; /* Gives that scrolling effect as the typing happens */
+  font-size: inherit;
+  animation: 
+    typing 1.5s steps(12, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes logo-scaling {
+    from {
+        height: 100%;
+        font-size: calc(90vw / 12);
+    }
+    to {
+        font-size: calc(50vw / 12);
+        height: 2em;
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 12ch }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--cyan) }
+}
+
+.noscript-content > div {
+  padding-bottom: 1rem;
 }
