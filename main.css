@@ -30,21 +30,6 @@ a {
   color: #eeeeee;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-footer div {
-    padding: 1rem;
-}
-
-
 .logo-user {
     color: var(--cyan);
 }
@@ -140,5 +125,129 @@ footer div {
 }
 
 main {
+    padding: 2rem;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+main div {
+    border-width: .1rem;
+    border-radius: .5rem;
+    border-color: var(--base01);
+    background: var(--base02);
+    margin: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+main div h2 {
+    text-align: center;
+    animation: main-t 0.6s ease-out forwards 3s;
+    transform: translateY(-500%);
+    margin-bottom: 0;
+}
+
+.hr-top {
+    opacity: 0%;
+    animation: hrtop-fadein 0.4s ease-out forwards 2.8s;
+}
+
+@keyframes hrtop-fadein {
+    from {
+        opacity: 0%;
+        width: 0%;
+    }
+    75% {
+        opacity: 100%;
+        width: 110%;
+    }
+    92% {
+        width: 93%;
+    }
+    to {
+        opacity: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes main-t {
+    from {
+        transform: translateY(-500%);
+    }
+    70% {
+        transform: translateY(30%);
+    }
+    85% {
+        transform: translateY(-20%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  transform: translateY(500%);
+  animation: footer-t 1s ease-out forwards 3s;
+}
+
+footer div {
+    padding: 1rem;
+}
+
+
+@keyframes footer-t {
+    from {
+        transform: translateY(500%);
+    }
+    70% {
+        transform: translateY(-30%);
+    }
+    85% {
+        transform: translateY(20%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.hr-bottom {
+    opacity: 0%;
+    animation: hrbottom-fadeout 1s ease-in-out forwards 3.2s;
+}
+
+@keyframes hrbottom-fadeout {
+    from,to {
+        opacity: 0%;
+        width: 0%;
+    }
+    20%,80% {
+        opacity: 100%;
+        width: 100%;
+    }
+
+}
+
+.content {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    animation: content-fadein 0.4s ease-in-out forwards 3.5s;
+}
+
+@keyframes content-fadein {
+    from {
+        height: 0;
+    }
+    to {
+        height: 10rem;
+    }
 }
