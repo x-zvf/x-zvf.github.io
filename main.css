@@ -24,7 +24,18 @@ body {
   color: var(--base2);
   height: 100%;
   box-sizing: border-box;
+  animation: hide-overflow-initial 4s;
 }
+
+@keyframes hide-overflow-initial {
+    from {
+        overflow: hidden;
+    }
+    to {
+        overflow: initial;
+    }
+}
+
 a {
   color: #eeeeee;
 }
@@ -128,13 +139,35 @@ a {
   padding-bottom: 1rem;
 }
 
+.links {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--blue);
+}
+.links a {
+    text-align: center;
+    width: fit-content;
+    padding: 0 1em;
+}
+
+.fa-twitter {
+    color: var(--blue);
+}
+
+.fa-github {
+    color: var(--base3);
+}
+
 main {
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
-main div {
+main div div {
   border-width: 0.1rem;
   border-radius: 0.5rem;
   border-color: var(--base01);
@@ -144,11 +177,19 @@ main div {
   overflow: hidden;
 }
 
-main div h2 {
+main div div h2 {
   text-align: center;
   animation: main-t 0.6s ease-out forwards 3s;
   transform: translateY(-500%);
   margin: 0;
+}
+
+main div div hr {
+    border-color: var(--base01);
+}
+
+.contact h2 {
+
 }
 
 .hr-top {
@@ -255,4 +296,13 @@ footer div {
   to {
     max-height: 1000vh;
   }
+}
+
+.contact .content {
+    text-align: center;
+}
+
+.contact .content a {
+    color: var(--cyan);
+
 }
