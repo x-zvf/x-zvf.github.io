@@ -24,18 +24,48 @@ body {
   color: var(--base2);
   height: 100%;
   box-sizing: border-box;
-  animation: hide-overflow-initial 4s;
+  animation: hide-overflow-initial 8s;
   margin: 0;
   padding: 0;
+
+  background: 
+  repeating-linear-gradient(
+    0deg,
+    var(--base03),
+    var(--base03) 1px
+  ),
+  repeating-linear-gradient(
+      60deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0) 4em,
+      var(--base02) 4em,
+      var(--base02) 6em
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0) 4em,
+      var(--base02) 4em,
+      var(--base02) 6em
+    ),
+    repeating-linear-gradient(
+      -60deg,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0) 4em,
+      var(--base02) 4em,
+      var(--base02) 6em
+    );
+
+  background-blend-mode: lighten;
 }
 
 @keyframes hide-overflow-initial {
-    from {
-        overflow: hidden;
-    }
-    to {
-        overflow: initial;
-    }
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: initial;
+  }
 }
 
 a {
@@ -137,27 +167,26 @@ a {
   }
 }
 
-
 .links {
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--blue);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--blue);
 }
 .links a {
-    text-align: center;
-    width: fit-content;
-    padding: 0 1em;
+  text-align: center;
+  width: fit-content;
+  padding: 0 1em;
 }
 
 .fa-twitter {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .fa-github {
-    color: var(--base3);
+  color: var(--base3);
 }
 
 .fa-at {
@@ -196,11 +225,10 @@ a {
 }
 
 .s-projects div div hr {
-    border-color: var(--base01);
+  border-color: var(--base01);
 }
 
 .contact h2 {
-
 }
 
 .hr-top {
@@ -310,10 +338,9 @@ footer div {
 }
 
 .contact .content {
-    text-align: center;
+  text-align: center;
 }
 
 .contact .content a {
-    color: var(--cyan);
-
+  color: var(--cyan);
 }
