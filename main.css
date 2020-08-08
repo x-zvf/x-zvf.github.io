@@ -161,13 +161,13 @@ a {
     color: var(--base3);
 }
 
-main {
+.s-projects {
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
-main div div {
+.s-projects div div {
   border-width: 0.1rem;
   border-radius: 0.5rem;
   border-color: var(--base01);
@@ -177,14 +177,14 @@ main div div {
   overflow: hidden;
 }
 
-main div div h2 {
+.s-projects div h2 {
   text-align: center;
   animation: main-t 0.6s ease-out forwards 3s;
   transform: translateY(-500%);
   margin: 0;
 }
 
-main div div hr {
+.s-projects div div hr {
     border-color: var(--base01);
 }
 
