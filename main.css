@@ -25,6 +25,8 @@ body {
   height: 100%;
   box-sizing: border-box;
   animation: hide-overflow-initial 4s;
+  margin: 0;
+  padding: 0;
 }
 
 @keyframes hide-overflow-initial {
@@ -135,9 +137,6 @@ a {
   }
 }
 
-.noscript-content > div {
-  padding-bottom: 1rem;
-}
 
 .links {
     padding: 1rem;
@@ -159,6 +158,18 @@ a {
 
 .fa-github {
     color: var(--base3);
+}
+
+.fa-at {
+  color: var(--orange);
+}
+
+.projects-title {
+  text-align: center;
+  padding-top: 1rem;
+  margin: 0;
+  display: block;
+  width: 100%;
 }
 
 .s-projects {
