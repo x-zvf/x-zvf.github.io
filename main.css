@@ -28,6 +28,7 @@ body {
   margin: 0;
   padding: 0;
 
+  /*
   background: 
   repeating-linear-gradient(
     0deg,
@@ -57,6 +58,7 @@ body {
     );
 
   background-blend-mode: lighten;
+  */
 }
 
 @keyframes hide-overflow-initial {
@@ -167,10 +169,27 @@ a {
   }
 }
 
+@keyframes link-flyin {
+  from {
+    opacity: 0%;
+    margin: 0 10em;
+  }
+  75% {
+    margin: 0 -0.5em;
+  }
+  92% {
+    margin: 0 0.25em;
+  }
+  to {
+    opacity: 100%;
+    margin: 0;
+  }
+}
+
 .links {
   padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   font-size: 2rem;
   color: var(--blue);
@@ -179,6 +198,10 @@ a {
   text-align: center;
   width: fit-content;
   padding: 0 1em;
+
+  opacity: 0;
+  margin: 0 10em;
+  animation: link-flyin 0.75s ease-out forwards 2.8s;
 }
 
 .fa-twitter {
@@ -322,10 +345,10 @@ footer div {
 
 .content {
   max-height: 0;
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   overflow: hidden;
-  animation: content-fadein 3s ease-in forwards 3.5s;
+  animation: content-fadein 2s ease-in forwards 3.5s;
 }
 
 @keyframes content-fadein {
@@ -333,7 +356,7 @@ footer div {
     max-height: 0;
   }
   to {
-    max-height: 1000vh;
+    max-height: 100vh;
   }
 }
 
