@@ -20,9 +20,9 @@
 html,
 body {
   background: var(--base03);
-  font-family: "Hack", monospace;
   color: var(--base2);
   height: 100%;
+  font-family: "Noto Sans", Helvetica, sans-serif;
   box-sizing: border-box;
   animation: hide-overflow-initial 5.5s steps(1);
   margin: 0;
@@ -99,6 +99,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100%;
+  font-family: "Hack", monospace;
   font-size: calc(90vw / 12);
   animation: logo-scaling 1.5s ease-in-out forwards 2s;
 }
@@ -216,6 +217,66 @@ a {
   color: var(--orange);
 }
 
+.s-about{
+  padding: 0;
+  margin: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.s-about div {
+  overflow: hidden;
+}
+.s-about div p {
+  opacity: 0;
+}
+.s-about div p:nth-child(1) {
+  animation: vertical-flyin-left 0.7s ease-out forwards 2.9s;
+}
+
+.s-about div p:nth-child(2) {
+  animation: vertical-flyin-left 0.7s ease-out forwards 2.95s;
+}
+
+@keyframes vertical-flyin-left {
+  from {
+    opacity: 0%;
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(20%);
+  }
+  92% {
+    transform: translateX(-2%);
+    opacity: 30%;
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes vertical-flyin-right {
+  from {
+    opacity: 0%;
+    transform: translateX(200%);
+  }
+  75% {
+    transform: translateX(-20%);
+  }
+  92% {
+    transform: translateX(2%);
+    opacity: 30%;
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
 .projects-title-wrapper {
   margin: 0;
   padding: 0;
@@ -259,9 +320,6 @@ a {
 
 .s-projects div div hr {
   border-color: var(--base01);
-}
-
-.contact h2 {
 }
 
 .hr-top {
