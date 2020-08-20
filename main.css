@@ -282,9 +282,72 @@ a {
   }
 }
 
-.s-tech {
-  font-size: 2rem;
+.s-about {
+  width: 100%;
+  font-size: 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.s-about p {
+  max-width: min(90%, 30em);
+  text-align: center;
+}
+
+.tech-title-wrapper {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.s-tech-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+}
+.s-tech {
+  display: flex;
+  flex-direction: column;
+}
+
+.b-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5em;
+  background: var(--base02);
+}
+
+.b-lang {
+  padding: 0.25em 0.5em;
+  margin: 0.25em 0.5em;
+  border-radius: 0.5em;
+  font-size: 1.125em;
+  margin-right: auto;
+}
+
+.b-other {
+  padding: 0.125em 0.25em;
+  margin: 0.125em 0.25em;
+  border-radius: 0.25em;
+  background: var(--base02);
+  margin-left: auto;
+}
+
+.lang-python {background: var(--orange);}
+.lang-js {background: var(--yellow);}
+.lang-c {background: var(--blue);}
+.lang-csharp {background: var(--cyan);}
+.lang-java {background: var(--violet);}
+.lang-shell {background: var(--red);}
+.lang-perl {background: var(--blue);}
 
 .projects-title-wrapper {
   margin: 0;
