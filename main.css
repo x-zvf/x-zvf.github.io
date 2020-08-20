@@ -217,7 +217,11 @@ a {
   color: var(--orange);
 }
 
-.s-about{
+.s-divider {
+  border-color: var(--base01);
+}
+
+.s-greeting{
   padding: 0;
   margin: 0;
   width: auto;
@@ -227,18 +231,18 @@ a {
   font-size: 2rem;
 }
 
-.s-about div {
+.s-greeting div {
   overflow: hidden;
 }
-.s-about div p {
+.s-greeting div p {
   opacity: 0;
   margin: 0.25em;
 }
-.s-about div p:nth-child(1) {
+.s-greeting div p:nth-child(1) {
   animation: vertical-flyin-left 0.7s ease-out forwards 2.9s;
 }
 
-.s-about div p:nth-child(2) {
+.s-greeting div p:nth-child(2) {
   animation: vertical-flyin-left 0.7s ease-out forwards 2.95s;
 }
 
@@ -276,6 +280,10 @@ a {
     opacity: 100%;
     transform: translateX(0%);
   }
+}
+
+.s-tech {
+  font-size: 2rem;
 }
 
 .projects-title-wrapper {
