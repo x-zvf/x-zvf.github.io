@@ -311,8 +311,7 @@ a {
   flex-shrink: 1;
 }
 .s-tech {
-  display: flex;
-  flex-direction: column;
+  font-size: 1.25em;
 }
 
 .b-row {
@@ -325,9 +324,9 @@ a {
   background: var(--base02);
 }
 
-.b-lang {
-  padding: 0.25em 0.5em;
-  margin: 0.25em 0.5em;
+.lang {
+  padding: 0.125em 0.5em;
+  margin: 0.125em 0.5em;
   border-radius: 0.5em;
   font-size: 1.125em;
   margin-right: auto;
@@ -341,13 +340,16 @@ a {
   margin-left: auto;
 }
 
-.lang-python {background: var(--orange);}
-.lang-js {background: var(--yellow);}
-.lang-c {background: var(--blue);}
-.lang-csharp {background: var(--cyan);}
-.lang-java {background: var(--violet);}
-.lang-shell {background: var(--red);}
-.lang-perl {background: var(--blue);}
+.lang {
+  display: inline-block;
+}
+.lang-python {color: var(--orange);}
+.lang-js {color: var(--yellow);}
+.lang-c {color: var(--blue);}
+.lang-csharp {color: var(--cyan);}
+.lang-java {color: var(--violet);}
+.lang-shell {color: var(--red);}
+.lang-perl {color: var(--blue);}
 
 .projects-title-wrapper {
   margin: 0;
