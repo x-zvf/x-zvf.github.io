@@ -11,8 +11,10 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Noto+Sans" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto+Sans"
+    />
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css"
@@ -42,75 +44,109 @@
     <section class="s-greeting">
       <div>
         <p>Hi,</p>
-        <p>
-          I am Péter Bohner.
-        </p>
+        <p>I am Péter Bohner.</p>
       </div>
     </section>
 
     <section class="s-about">
-      <p>
-        I am a 17 year old highschool student in Germany, interested in Computer
-        Science and Software Development.
-      </p>
+      <div class="">
+        <p>
+          I am a 17 year old highschool student in Germany, interested in
+          Computer Science and Software Development.
+        </p>
+        <p>
+          My projects include Automation, Application and Embedded Development.
+        </p>
+      </div>
     </section>
 
     <section class="s-tech-wrapper">
       <div class="s-tech">
-        I mainly use <b class="lang lang-python">Python</b>,
-        <b class="lang lang-js">JavaScript</b> and <b class="lang lang-c">C</b>.
+        <div class="tags tag-lg">
+          <div class="lang">Python</div>
+          <div class="lang">C & C++</div>
+          <div class="lang">JavaScript</div>
+        </div>
+        <div class="tags tag-md">
+          <div class="lang">shell</div>
+          <div class="lang">C# (unity3d, WPF)</div>
+          <div class="lang">Java (JavaFX, Spring)</div>
+          <div class="lang">(postgres) SQL</div>
+          <div class="lang">Perl</div>
+        </div>
       </div>
     </section>
 
     <div class="projects-title-wrapper">
-      <h1 class="projects-title">
-        What I Make
-      </h1>
+      <h1 class="projects-title">What I Make</h1>
     </div>
 
     <section class="s-projects">
       <div class="grid-item">
-        <div class="about">
-          <h2>Stuffs</h2>
+        <div class="project">
+          <h2>GMSLv3 test box</h2>
           <hr class="hr-top" />
           <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-            adipisci culpa explicabo ipsam, assumenda, et rerum ab doloremque
-            maiores asperiores provident nostrum est. Eveniet tempora blanditiis
-            natus nemo optio. Voluptates.
+            <p>
+              Software and firmware for an automotive test device, actively used
+              to develop components for an upcoming car. It is used to mock a
+              board computer for said car.
+            </p>
+            <p>Based on a RPi, it includes:</p>
+            <ul>
+              <li>Custom device drivers</li>
+              <li>A flexible, extensible emulator</li>
+              <li>Shell scripting and automation interface</li>
+              <li>RESTful API</li>
+              <li>(web) UI</li>
+            </ul>
+            <p>
+              With over 30k SLOC combined, this is my largest project thus far.
+            </p>
+            <div class="tags tag-sm">
+              <div class="lang">C</div>
+              <div class="lang">Python</div>
+              <div class="lang">shell</div>
+              <div class="lang">JavaScript (Svelte)</div>
+            </div>
           </div>
           <hr class="hr-bottom" />
         </div>
       </div>
       <div class="grid-item">
-        <div class="projects">
-          <h2>a Projects</h2>
+        <div class="project">
+          <h2>ReSoCa</h2>
           <hr class="hr-top" />
           <div class="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            exercitationem ipsam incidunt eaque a quas error ex veritatis ad
-            quaerat nihil eius amet possimus dignissimos, aperiam libero minus
-            accusamus nostrum.
+            <p>
+              REmoteSOcketCAn
+            </p>
+            <p>
+              A small open source part of the GMSLv3 test box software, which allows
+              sending and receiving CANFD messages over TCP/IP via on Protobuf.
+            </p>
+            <div class="tags tag-sm">
+              <div class="lang">C++</div>
+              <div class="lang">boost</div>
+              <div class="lang">C# (WPF)</div>
+            </div>
+
           </div>
           <hr class="hr-bottom" />
         </div>
       </div>
       <div class="grid-item">
-        <div class="contact">
+        <div class="project">
           <h2>some prod;kfjdfkjdfk</h2>
           <hr class="hr-top" />
-          <div class="content">
-            Some projects
-          </div>
+          <div class="content">Some projects</div>
           <hr class="hr-bottom" />
         </div>
       </div>
     </section>
 
     <footer>
-      <div class="copy">
-        &copy; 2020 Péter Bohner
-      </div>
+      <div class="copy">&copy; 2020 Péter Bohner</div>
       <div class="plain-link">
         <a href="/plain.html">plaintext version</a>
       </div>

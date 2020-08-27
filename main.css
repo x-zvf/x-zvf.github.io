@@ -17,6 +17,41 @@
   --green: #859900;
 }
 
+.lang {
+  display: inline-block;
+  padding: 0.125em 0.5em;
+  margin: 0.125em 0.5em;
+  font-family: "Hack Nerd Font", monospace;
+  font-weight: 600;
+  font-size: inherit;
+  border-radius: 0.3em;
+  background: var(--base02);
+}
+/* .lang-yellow {
+  background: var(--yellow);
+}
+.lang-orange {
+  background: var(--orange);
+}
+.lang-red {
+  background: var(--red);
+}
+.lang-magenta {
+  background: var(--magenta);
+}
+.lang-violet {
+  background: var(--violet);
+}
+.lang-blue {
+  background: var(--blue);
+}
+.lang-cyan {
+  background: var(--cyan);
+}
+.lang-green {
+  background: var(--green);
+} */
+
 html,
 body {
   background: var(--base03);
@@ -221,14 +256,14 @@ a {
   border-color: var(--base01);
 }
 
-.s-greeting{
+.s-greeting {
   padding: 0;
   margin: 0;
   width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .s-greeting div {
@@ -286,12 +321,16 @@ a {
   width: 100%;
   font-size: 1.25em;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.s-about p {
+.s-about div {
   max-width: min(90%, 30em);
+}
+
+.s-about p {
   text-align: center;
 }
 
@@ -324,13 +363,12 @@ a {
   background: var(--base02);
 }
 
-.lang {
+/* .lang {
   padding: 0.125em 0.5em;
   margin: 0.125em 0.5em;
-  border-radius: 0.5em;
   font-size: 1.125em;
   margin-right: auto;
-}
+} */
 
 .b-other {
   padding: 0.125em 0.25em;
@@ -340,16 +378,15 @@ a {
   margin-left: auto;
 }
 
-.lang {
-  display: inline-block;
+.tag-sm {
+  font-size: 1rem;
 }
-.lang-python {color: var(--orange);}
-.lang-js {color: var(--yellow);}
-.lang-c {color: var(--blue);}
-.lang-csharp {color: var(--cyan);}
-.lang-java {color: var(--violet);}
-.lang-shell {color: var(--red);}
-.lang-perl {color: var(--blue);}
+.tag-md {
+  font-size: 1.25rem;
+}
+.tag-lg {
+  font-size: 1.5rem;
+}
 
 .projects-title-wrapper {
   margin: 0;
@@ -369,13 +406,19 @@ a {
   animation: flybottom-t 0.6s ease-out forwards 2.7s;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .s-projects {
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
-.s-projects div div {
+.s-projects .project {
   border-width: 0.1rem;
   border-radius: 0.5rem;
   border-color: var(--base01);
@@ -495,6 +538,10 @@ footer div {
   margin: 0 !important;
   overflow: hidden;
   animation: content-fadein 2s ease-in forwards 3.5s;
+}
+
+.content p {
+  text-align: justify;
 }
 
 @keyframes content-fadein {
