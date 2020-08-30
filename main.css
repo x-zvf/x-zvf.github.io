@@ -429,6 +429,24 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
+.project-header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  animation: main-t 0.6s ease-out forwards 3s;
+  transform: translateY(-500%);
+}
+
+.project-header a {
+  margin-left: 1em;
+  font-size: 1.5rem;
+}
+.project-header h2 {
+  text-align: center;
+  margin: 0;
+}
+
 .s-projects .project {
   border-width: 0.1rem;
   border-radius: 0.5rem;
@@ -439,12 +457,6 @@ a {
   overflow: hidden;
 }
 
-.s-projects div h2 {
-  text-align: center;
-  animation: main-t 0.6s ease-out forwards 3s;
-  transform: translateY(-500%);
-  margin: 0;
-}
 
 .s-projects div div hr {
   border-color: var(--base01);
