@@ -550,6 +550,10 @@ footer div {
   text-align: justify;
 }
 
+.padding-b {
+  height: 2rem;
+}
+
 @keyframes content-fadein {
   from {
     max-height: 0;
