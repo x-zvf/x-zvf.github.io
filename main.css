@@ -17,16 +17,6 @@
   --green: #859900;
 }
 
-.lang {
-  display: inline-block;
-  padding: 0.125em 0.5em;
-  margin: 0.125em 0.5em;
-  font-family: "Hack Nerd Font", monospace;
-  font-weight: 600;
-  font-size: inherit;
-  border-radius: 0.3em;
-  background: var(--base02);
-}
 /* .lang-yellow {
   background: var(--yellow);
 }
@@ -351,6 +341,11 @@ a {
 }
 .s-tech {
   font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
 }
 
 .b-row {
@@ -363,12 +358,22 @@ a {
   background: var(--base02);
 }
 
-/* .lang {
+.lang {
+  display: inline-block;
   padding: 0.125em 0.5em;
-  margin: 0.125em 0.5em;
-  font-size: 1.125em;
-  margin-right: auto;
-} */
+  margin: 0.35em 0.5em;
+  font-family: "Hack Nerd Font", monospace;
+  font-weight: 500;
+  font-size: inherit;
+  border-radius: 0.3em;
+  background: var(--base1);
+  color: var(--base03);
+}
+
+.lang-dark {
+  background: var(--base03);
+  color: var(--base2);
+}
 
 .b-other {
   padding: 0.125em 0.25em;
@@ -409,7 +414,7 @@ a {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
 }
 
 .s-projects {
@@ -517,6 +522,7 @@ footer div {
 .hr-bottom {
   opacity: 0%;
   animation: hrbottom-fadeout 1s ease-in-out forwards 3.2s;
+  margin: 0;
 }
 
 @keyframes hrbottom-fadeout {
